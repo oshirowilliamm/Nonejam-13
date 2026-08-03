@@ -6,7 +6,6 @@ grav        = .3;
 
 chao = false;
 
-
 inputs = function()
 {
     right   = keyboard_check(ord("D")) || keyboard_check(vk_right);
