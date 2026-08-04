@@ -72,6 +72,9 @@ checa_colisao = function()
 
 interacao = function()
 {
+    //so pega se n ta com item na mão
+    if (global.inventario) exit;
+    
     //pegando o bloco interagivel proximo
     var _prox = instance_nearest(x, y, obj_interagivel);
     
