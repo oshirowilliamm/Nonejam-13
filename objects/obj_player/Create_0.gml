@@ -12,6 +12,9 @@ teto = false;
 //interacao
 desenho = false;
 
+//estado
+estado = "parado";
+
 inputs = function()
 {
     right   = keyboard_check(ord("D")) || keyboard_check(vk_right);
@@ -40,12 +43,15 @@ controle = function()
         if (pulo)
         {
             vspd = -max_vspd;
+            estado = "pulando";
         }
         else
         {
             vspd = 0;
         }
     }
+    
+    checa_sprite();
     
     //colidindo
     move_and_collide(hspd, 0, obj_colisao, 4);
@@ -92,4 +98,74 @@ interacao = function()
         }
     }
     
+}
+
+checa_sprite = function()
+{
+    switch (estado) 
+    {
+    	case "parado":
+        {
+            sprite_index = spr_player_idle;
+            
+            //mudando de estado
+            if (hspd != 0)
+            {
+                estado = "andando";
+            }
+            
+            //mudando pro estado caindo
+            if (vspd != 0)
+            {
+                estado = "caindo";
+            }
+            
+            break;
+        }
+        
+        case "andando":
+        {
+            sprite_index = spr_player_run;
+            
+            //mudando de estado
+            if (hspd == 0)
+            {
+                estado = "parado";
+            }
+            
+            //mudando pro estado caindo
+            if (vspd != 0)
+            {
+                estado = "caindo";
+            }
+            
+            break;
+        }
+        
+        case "pulando":
+        {
+            sprite_index = spr_player_pulo;
+            
+            //mudando estado caindo
+            if (vspd > 0)
+            {
+                estado = "caindo";
+            }
+            
+            break;
+        }
+        
+        case "caindo":
+        {
+            sprite_index = spr_player_caindo;
+            
+            //mudando de estado
+            if (chao)
+            {
+                estado = "parado";
+            }
+            
+            break;
+        }
+    }
 }
