@@ -4,8 +4,11 @@ global.inventario = false;
 global.item = 
 {
     sprite: noone,
-    sprite_menor: noone,
     nome: "",
-    x: 0,
-    y: 0
+    obj: noone,
+    efeito: function(){},
+    
+    alvo: noone,
+    alvo_alcance: 0,
+    highlight: noone,
 }

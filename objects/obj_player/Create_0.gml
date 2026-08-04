@@ -10,10 +10,40 @@ chao = false;
 teto = false;
 
 //interacao
-desenho = false;
+desenho_tecla = false;
+tecla_index = 0;
 
 //estado
 estado = "parado";
+
+//variaveis sobre o item alvo
+alvo = noone;
+alvo_alcance = 0;
+
+
+
+controle_player = function()
+{
+    inputs();
+    movimento();
+    
+    desenho_tecla = false;
+    
+    //interações
+    if (!global.inventario)
+    {
+        pegando_item();
+    }
+    else
+    {
+        var _pode_usar = usando_item();
+        
+        if (!_pode_usar)
+        {
+            devolvendo_item();
+        }
+    }
+}
 
 inputs = function()
 {
@@ -21,10 +51,11 @@ inputs = function()
     left    = keyboard_check(ord("A")) || keyboard_check(vk_left);
     pulo    = keyboard_check_pressed(vk_space);
     pulo_r  = keyboard_check_released(vk_space);
-    usar    = keyboard_check_pressed(ord("E"));
+    pegar   = keyboard_check_pressed(ord("E"));
+    usar    = keyboard_check_pressed(ord("F"));
 }
 
-controle = function()
+movimento = function()
 {
     checa_colisao();
     
@@ -64,48 +95,100 @@ controle = function()
     }
 }
 
-interacao = function()
+pegando_item = function()
 {
-    //so pega se n ta com item na mão
-    if (global.inventario) exit;
-    
     //pegando o bloco interagivel proximo
     var _prox = instance_nearest(x, y, obj_interagivel);
     
     //se o bloco existe
-    if (_prox)
+    if (_prox && _prox.interagivel)
     {
         //pegando a distancia entre o player e o bloco
         var _dist = point_distance(x, y, _prox.x, _prox.y);
         
-        if (_dist <= _prox.alcance && _prox.interagivel)
+        if (_dist <= _prox.alcance)
         {
             //pode desenhar a tecla 
-            desenho = true;
+            desenho_tecla = true;
+            tecla_index = 0; 
             
             //interagindo
-            if (usar)
+            if (pegar)
             {
-                _prox.ativo = !_prox.ativo;
+                _prox.ativo = true;
             }
-        }
-        else
-        {
-            desenho = false;
         }
     }
     
 }
 
-highlight_item = function()
+usando_item = function()
 {
-    //só mostra o highlight se tem um item na mão
-    if (!global.inventario) exit;
+    //pegando as infos do item que esta na minha mão
+    alvo = global.item.alvo;
+    alvo_alcance = global.item.alvo_alcance;
     
-    shader_set(sh_branco);
-    draw_sprite_ext(global.item.sprite_menor, 0, global.item.x, global.item.y, 1, 1, 0, c_white, .7);
-    shader_reset();
+    //checando se o alvo existe
+    if (instance_exists(alvo)) 
+    {
+        //pegando alvo
+        var _inst_alvo = instance_nearest(x, y, alvo);
+        
+        //pegando distancia com o alvo
+        var _dist = point_distance(x, y, _inst_alvo.x, _inst_alvo.y);
+        
+        if (_dist <= alvo_alcance)
+        {
+            desenho_tecla = true;
+            tecla_index = 1;
+            
+            //interagindo
+            if (usar)
+            {
+                //tocando o efeito do item
+                global.item.efeito();
+                
+                //tirando item da mão
+                global.inventario = false;
+                
+                //tirando o highlight
+                instance_destroy(global.item.highlight);
+            }
+            
+            //avisando que consegue usar o item
+            return true;
+        }
+    }
+    
+    //avisando que não consegue usar o item
+    return false;
 }
+
+devolvendo_item = function()
+{
+    //pegando o highlight
+    var _high = instance_nearest(x, y, obj_highlight);
+    
+    if (!instance_exists(_high)) exit;
+    
+    //pegando distancia com o obj highlight
+    var _dist = point_distance(x, y, _high.x, _high.y);
+    
+    if (_dist <= _high.alcance)
+    {
+        //pode desenhar a tecla 
+        desenho_tecla = true;
+        tecla_index = 0;
+        
+        //interagindo
+        if (pegar)
+        {
+            //devolvendo pelo obj highlight
+            _high.devolvendo();
+        }
+    }
+}
+
 
 
 checa_colisao = function()

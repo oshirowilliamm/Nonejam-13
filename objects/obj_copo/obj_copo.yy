@@ -8,8 +8,8 @@
   "name":"obj_copo",
   "overriddenProperties":[],
   "parent":{
-    "name":"Elementos",
-    "path":"folders/Objects/Elementos.yy",
+    "name":"Reacao1",
+    "path":"folders/Objects/Elementos/Reacao1.yy",
   },
   "parentObjectId":{
     "name":"obj_pegando",

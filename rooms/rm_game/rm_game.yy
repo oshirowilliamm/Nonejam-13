@@ -42,8 +42,6 @@
     {"name":"inst_163BD011","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_3BB4440A","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_7014BB86","path":"rooms/rm_game/rm_game.yy",},
-    {"name":"inst_641A8176","path":"rooms/rm_game/rm_game.yy",},
-    {"name":"inst_13098EB3","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_188185F6","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_3A108C06","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_59A73DA4","path":"rooms/rm_game/rm_game.yy",},
@@ -52,6 +50,8 @@
     {"name":"inst_5BD44D1E","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_6096B406","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_3EF167FF","path":"rooms/rm_game/rm_game.yy",},
+    {"name":"inst_368F179","path":"rooms/rm_game/rm_game.yy",},
+    {"name":"inst_6DF4F929","path":"rooms/rm_game/rm_game.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -90,13 +90,6 @@
         {"$GMRInstance":"v4","%Name":"inst_7014BB86","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7014BB86","objectId":{"name":"obj_garcom","path":"objects/obj_garcom/obj_garcom.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":417.0,"y":191.0,},
       ],"layers":[],"name":"NPCs","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Elementos","depth":300,"effectEnabled":true,"effectType":null,"gridX":1,"gridY":1,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v4","%Name":"inst_641A8176","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_641A8176","objectId":{"name":"obj_flor","path":"objects/obj_flor/obj_flor.yy",},"properties":[
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_interagivel","path":"objects/obj_interagivel/obj_interagivel.yy",},"propertyId":{"name":"interagivel","path":"objects/obj_interagivel/obj_interagivel.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
-          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":100.0,"y":166.0,},
-        {"$GMRInstance":"v4","%Name":"inst_13098EB3","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_13098EB3","objectId":{"name":"obj_flor","path":"objects/obj_flor/obj_flor.yy",},"properties":[
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_flor","path":"objects/obj_flor/obj_flor.yy",},"propertyId":{"name":"index","path":"objects/obj_flor/obj_flor.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_interagivel","path":"objects/obj_interagivel/obj_interagivel.yy",},"propertyId":{"name":"interagivel","path":"objects/obj_interagivel/obj_interagivel.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
-          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":118.0,"y":166.0,},
         {"$GMRInstance":"v4","%Name":"inst_188185F6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_188185F6","objectId":{"name":"obj_flor","path":"objects/obj_flor/obj_flor.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_flor","path":"objects/obj_flor/obj_flor.yy",},"propertyId":{"name":"index","path":"objects/obj_flor/obj_flor.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":442.0,"y":166.0,},
@@ -110,6 +103,10 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_interagivel","path":"objects/obj_interagivel/obj_interagivel.yy",},"propertyId":{"name":"interagivel","path":"objects/obj_interagivel/obj_interagivel.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":229.0,"y":185.0,},
         {"$GMRInstance":"v4","%Name":"inst_156EC60","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_156EC60","objectId":{"name":"obj_lubrificante","path":"objects/obj_lubrificante/obj_lubrificante.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":197.0,"y":163.0,},
+        {"$GMRInstance":"v4","%Name":"inst_368F179","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_368F179","objectId":{"name":"obj_flor_morta","path":"objects/obj_flor_morta/obj_flor_morta.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":102.0,"y":166.0,},
+        {"$GMRInstance":"v4","%Name":"inst_6DF4F929","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6DF4F929","objectId":{"name":"obj_flor_morta","path":"objects/obj_flor_morta/obj_flor_morta.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_flor_morta","path":"objects/obj_flor_morta/obj_flor_morta.yy",},"propertyId":{"name":"index","path":"objects/obj_flor_morta/obj_flor_morta.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":118.0,"y":166.0,},
       ],"layers":[],"name":"Elementos","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assentos","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_58CC9572","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_58CC9572","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_assento_lado","path":"sprites/spr_assento_lado/spr_assento_lado.yy",},"x":32.0,"y":178.0,},

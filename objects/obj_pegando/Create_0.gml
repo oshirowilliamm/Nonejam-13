@@ -1,29 +1,45 @@
 // Inherit the parent event
 event_inherited();
 
-item_sprite = noone;
-item_sprite_menor = noone;
-item_nome = "";
+item_sprite         = noone;
+item_sprite_menor   = noone;
+item_nome           = "";
 
-//posição do highlight
-pos_x = x;
-pos_y = y;
+//variaveis do alvo
+alvo = noone;
+alvo_alcance = 0;
 
 interagir = function()
 {
     //destruindo o item
     instance_destroy();
     
+    var _highlight = drop_highlight();
+    
     //colocando no inventario
     global.inventario = true;
-    global.item.sprite = item_sprite;
-    global.item.sprite_menor = item_sprite_menor;
-    global.item.nome = item_nome;
-    global.item.x = pos_x;
-    global.item.y = pos_y;
+    global.item.sprite          = item_sprite;
+    global.item.nome            = item_nome;
+    global.item.obj             = object_index;
+    global.item.efeito          = reacao;
+    
+    //alvo
+    global.item.alvo            = alvo;
+    global.item.alvo_alcance    = alvo_alcance;
+    global.item.highlight       = _highlight;
 }
 
-dropando_item = function()
+drop_highlight = function()
+{
+    //dropando o highlight
+    var _high = instance_create_layer(x, y, layer, obj_highlight);
+    _high.sprite_index = item_sprite_menor;
+    _high.alcance = alcance;
+    
+    return _high;
+}
+
+reacao = function()
 {
     
 }

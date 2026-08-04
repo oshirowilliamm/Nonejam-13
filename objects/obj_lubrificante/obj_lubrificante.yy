@@ -10,8 +10,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_interagivel","path":"objects/obj_interagivel/obj_interagivel.yy",},"propertyId":{"name":"interagivel","path":"objects/obj_interagivel/obj_interagivel.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
   ],
   "parent":{
-    "name":"Elementos",
-    "path":"folders/Objects/Elementos.yy",
+    "name":"Reacao1",
+    "path":"folders/Objects/Elementos/Reacao1.yy",
   },
   "parentObjectId":{
     "name":"obj_pegando",

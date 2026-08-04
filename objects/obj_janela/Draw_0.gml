@@ -6,5 +6,5 @@ if (!interagivel)
 //desenhando janela enferrujada
 else
 {
-    draw_sprite(spr_janela_enferrujada, 0, x, y);
+    draw_sprite(sprite, 0, x, y);
 }

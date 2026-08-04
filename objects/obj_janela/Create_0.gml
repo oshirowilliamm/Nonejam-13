@@ -1,11 +1,14 @@
 // Inherit the parent event
 event_inherited();
 
+sprite = spr_janela_enferrujada;
 image_speed = 0;
 alcance = 20;
 
 interagir = function()
 {
+    if (sprite == spr_janela_enferrujada) exit;
+    
     //deixando de ser interagivel
     interagivel = false;
     

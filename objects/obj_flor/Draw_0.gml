@@ -1,1 +1,1 @@
-draw_sprite(sprite_index, index, x, y);
+draw_sprite(spr_flor, index, x, y);
