@@ -64,12 +64,6 @@ controle = function()
     }
 }
 
-checa_colisao = function()
-{
-    chao = place_meeting(x, y + 1, obj_colisao);
-    teto = place_meeting(x, y - 1, obj_colisao);
-}
-
 interacao = function()
 {
     //so pega se n ta com item na mão
@@ -101,6 +95,23 @@ interacao = function()
         }
     }
     
+}
+
+highlight_item = function()
+{
+    //só mostra o highlight se tem um item na mão
+    if (!global.inventario) exit;
+    
+    shader_set(sh_branco);
+    draw_sprite_ext(global.item.sprite_menor, 0, global.item.x, global.item.y, 1, 1, 0, c_white, .7);
+    shader_reset();
+}
+
+
+checa_colisao = function()
+{
+    chao = place_meeting(x, y + 1, obj_colisao);
+    teto = place_meeting(x, y - 1, obj_colisao);
 }
 
 checa_sprite = function()

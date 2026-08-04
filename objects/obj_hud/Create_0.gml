@@ -22,25 +22,3 @@ desenha_relogio = function()
     draw_set_valign(-1);
     draw_set_font(-1);
 }
-
-desenha_inventario = function()
-{
-    if (global.inventario)
-    {
-        //desenhando slot de inventario
-        var _margem = 60;
-        var _h = display_get_gui_height();
-        var _w_spr = sprite_get_width(spr_slot);
-        var _h_spr = sprite_get_height(spr_slot);
-        var _xslot = _w_spr + _margem;
-        var _yslot = _h - _h_spr - _margem;
-        
-        draw_sprite_ext(spr_slot, 0, _xslot, _yslot, escala, escala, 0, c_white, 1);
-        
-        //desenhando elemento
-        if (global.item != noone)
-        {
-            draw_sprite_ext(global.item, 0, _xslot, _yslot, escala, escala, 0, c_white, 1);
-        }
-    }
-}
