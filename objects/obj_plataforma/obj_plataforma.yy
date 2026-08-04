@@ -6,8 +6,8 @@
   "name":"obj_plataforma",
   "overriddenProperties":[],
   "parent":{
-    "name":"CenarioTrem",
-    "path":"folders/Objects/CenarioTrem.yy",
+    "name":"Cenario",
+    "path":"folders/Objects/Cenario.yy",
   },
   "parentObjectId":{
     "name":"obj_colisao",

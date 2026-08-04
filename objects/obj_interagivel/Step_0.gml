@@ -1,0 +1,3 @@
+if (!ativo) exit;
+
+interagir();

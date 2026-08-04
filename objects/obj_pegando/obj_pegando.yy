@@ -1,17 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_elevador_teto",
-  "eventList":[],
+  "%Name":"obj_pegando",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_elevador_teto",
+  "name":"obj_pegando",
   "overriddenProperties":[],
   "parent":{
-    "name":"Cenario",
-    "path":"folders/Objects/Cenario.yy",
+    "name":"Elementos",
+    "path":"folders/Objects/Elementos.yy",
   },
   "parentObjectId":{
-    "name":"obj_colisao",
-    "path":"objects/obj_colisao/obj_colisao.yy",
+    "name":"obj_interagivel",
+    "path":"objects/obj_interagivel/obj_interagivel.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -30,10 +32,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_elevador_teto",
-    "path":"sprites/spr_elevador_teto/spr_elevador_teto.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

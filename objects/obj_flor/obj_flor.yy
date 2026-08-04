@@ -1,17 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_npc",
+  "%Name":"obj_flor",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_npc",
+  "name":"obj_flor",
   "overriddenProperties":[],
   "parent":{
-    "name":"NPCs",
-    "path":"folders/Objects/NPCs.yy",
+    "name":"Elementos",
+    "path":"folders/Objects/Elementos.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_pegando",
+    "path":"objects/obj_pegando/obj_pegando.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -26,16 +29,16 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v2","%Name":"sprite","filters":[
+    {"$GMObjectProperty":"v2","%Name":"index","filters":[
         "GMSprite",
-      ],"listItems":[],"multiselect":false,"name":"sprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"spr_lara","path":"sprites/spr_lara/spr_lara.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_lara","varType":5,},
+      ],"listItems":[],"multiselect":false,"name":"index","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_lara",
-    "path":"sprites/spr_lara/spr_lara.yy",
+    "name":"spr_flor",
+    "path":"sprites/spr_flor/spr_flor.yy",
   },
   "spriteMaskId":null,
   "visible":true,

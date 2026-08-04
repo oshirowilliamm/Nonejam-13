@@ -9,8 +9,8 @@
   "name":"obj_elevador",
   "overriddenProperties":[],
   "parent":{
-    "name":"CenarioTrem",
-    "path":"folders/Objects/CenarioTrem.yy",
+    "name":"Cenario",
+    "path":"folders/Objects/Cenario.yy",
   },
   "parentObjectId":{
     "name":"obj_colisao",

@@ -1,15 +1,21 @@
 {
   "$GMObject":"",
   "%Name":"obj_janela",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_janela",
   "overriddenProperties":[],
   "parent":{
-    "name":"CenarioTrem",
-    "path":"folders/Objects/CenarioTrem.yy",
+    "name":"Elementos",
+    "path":"folders/Objects/Elementos.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_interagivel",
+    "path":"objects/obj_interagivel/obj_interagivel.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
