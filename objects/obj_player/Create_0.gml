@@ -1,23 +1,26 @@
+//movimentação
 hspd        = 0;
 max_hspd    = 2;
-vspd        = 0;
-max_vspd    = 5;
-grav        = .3;
 
+//gravidade e pulo
+vspd        = 0;
+max_vspd    = 4;
+grav        = .3;
 chao = false;
+teto = false;
 
 inputs = function()
 {
     right   = keyboard_check(ord("D")) || keyboard_check(vk_right);
     left    = keyboard_check(ord("A")) || keyboard_check(vk_left);
-    up      = keyboard_check(ord("W")) || keyboard_check(vk_up);
-    down    = keyboard_check(ord("S")) || keyboard_check(vk_down);
-    pulo    = keyboard_check(vk_space);
-    agachar = keyboard_check(vk_control);
+    pulo    = keyboard_check_pressed(vk_space);
+    pulo_r  = keyboard_check_released(vk_space);
 }
 
 controle = function()
 {
+    checa_colisao();
+    
     //movendo (velocidade)
     hspd = (right - left) * max_hspd;
     
@@ -38,29 +41,21 @@ controle = function()
         {
             vspd = 0;
         }
-        
-        //agachando
-        if (agachar)
-        {
-            sprite_index = spr_player_agachado;
-            max_hspd = 1;
-        }
-        else
-        {
-            sprite_index = spr_player;
-            max_hspd = 2;
-        }
     }
     
     //colidindo
     move_and_collide(hspd, 0, obj_colisao, 4);
-    move_and_collide(0, vspd, obj_colisao, 12);
+    move_and_collide(0, vspd, obj_colisao, 24);
     
-    
-    
+    //se colidiu com o teto, cai na hora
+    if (vspd < 0 && teto)
+    {
+        vspd = 0;
+    }
 }
 
-checa_chao = function()
+checa_colisao = function()
 {
     chao = place_meeting(x, y + 1, obj_colisao);
+    teto = place_meeting(x, y - 1, obj_colisao);
 }
