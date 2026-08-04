@@ -3,18 +3,6 @@ escala = 4;
 //timer
 tempo = game_get_speed(gamespeed_fps) * 30;
 
-//variaveis pro dialogo
-escala_dialogo = escala * 2;
-xscale_fim = escala_dialogo * 4.5;
-
-xscale = 0;
-yscale = escala_dialogo;
-alpha = 0;
-
-estado_dialogo = "fechado";
-dialogo_txt = "Hello World";
-
-
 desenha_relogio = function()
 {
     //desenhando relogio
