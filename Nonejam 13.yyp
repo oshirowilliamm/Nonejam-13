@@ -78,6 +78,7 @@
     {"id":{"name":"fnt_inventario","path":"fonts/fnt_inventario/fnt_inventario.yy",},},
     {"id":{"name":"fnt_relogio","path":"fonts/fnt_relogio/fnt_relogio.yy",},},
     {"id":{"name":"scribble_fallback_font","path":"fonts/scribble_fallback_font/scribble_fallback_font.yy",},},
+    {"id":{"name":"obj_abelha","path":"objects/obj_abelha/obj_abelha.yy",},},
     {"id":{"name":"obj_colisao","path":"objects/obj_colisao/obj_colisao.yy",},},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
     {"id":{"name":"obj_copo","path":"objects/obj_copo/obj_copo.yy",},},
