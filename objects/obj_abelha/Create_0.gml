@@ -3,6 +3,8 @@
 //3 - ir para as flores de acordo com a posição delas (primeira plataforma ou na cadeira)
 dest_x = 0;
 dest_y = 0;
+lamp_x = 105;
+lamp_y = 137;
 
 spd = .5;
 hspd = 0;
@@ -31,8 +33,8 @@ definindo_destino = function()
         //se não existe flor viva, vai pra lampada
         else
         {
-            dest_x = 105;
-            dest_y = 137;
+            dest_x = lamp_x;
+            dest_y = lamp_y;
         }
     }
 }
@@ -72,4 +74,15 @@ rodear = function()
     
     //tirando a abelha
     instance_destroy();
+    
+    //se a abelha n ta na lampada
+    if (dest_x != lamp_x)
+    {
+        //se ta perto da ana catarina
+        if (dest_x > 140)
+        {
+            //avisando a ana catarina
+            global.abelha_no_vaso = true;
+        }
+    }
 }

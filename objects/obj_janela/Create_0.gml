@@ -13,7 +13,7 @@ interagir = function()
         if (!instance_exists(obj_dialogo))
         {
             var _dialogo = instance_create_layer(x, y, "Dialogo", obj_dialogo);
-            _dialogo.lista_textos = global.dialogos.janela;
+            _dialogo.lista_textos = global.dialogos.player.janela;
         }
     }
     else

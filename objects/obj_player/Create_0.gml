@@ -38,6 +38,7 @@ controle_player = function()
     if (!global.inventario)
     {
         pegando_item();
+        interage_npc();
     }
     else
     {
@@ -52,12 +53,12 @@ controle_player = function()
 
 inputs = function()
 {
-    right   = keyboard_check(ord("D")) || keyboard_check(vk_right);
-    left    = keyboard_check(ord("A")) || keyboard_check(vk_left);
-    pulo    = keyboard_check_pressed(vk_space);
-    pulo_r  = keyboard_check_released(vk_space);
-    pegar   = keyboard_check_pressed(ord("E"));
-    usar    = keyboard_check_pressed(ord("F"));
+    right       = keyboard_check(ord("D")) || keyboard_check(vk_right);
+    left        = keyboard_check(ord("A")) || keyboard_check(vk_left);
+    pulo        = keyboard_check_pressed(vk_space);
+    pulo_r      = keyboard_check_released(vk_space);
+    pegar       = keyboard_check_pressed(ord("F"));
+    interagir   = keyboard_check_pressed(ord("E"));
 }
 
 movimento = function()
@@ -115,7 +116,7 @@ pegando_item = function()
         {
             //pode desenhar a tecla 
             desenho_tecla = true;
-            tecla_index = 0; 
+            tecla_index = 1; 
             
             //interagindo
             if (pegar)
@@ -144,10 +145,10 @@ usando_item = function()
         if (_dist <= alvo_alcance)
         {
             desenho_tecla = true;
-            tecla_index = 1;
+            tecla_index = 0;
             
             //interagindo
-            if (usar)
+            if (interagir)
             {
                 //tocando o efeito do item
                 global.item.efeito();
@@ -182,7 +183,7 @@ devolvendo_item = function()
     {
         //pode desenhar a tecla 
         desenho_tecla = true;
-        tecla_index = 0;
+        tecla_index = 1;
         
         //interagindo
         if (pegar)
@@ -193,6 +194,31 @@ devolvendo_item = function()
     }
 }
 
+interage_npc = function()
+{
+    //pegando o npc mais perto
+    var _npc = instance_nearest(x, y, obj_npc);
+    
+    //se existe
+    if (_npc)
+    {
+        //pegando a distancia
+        var _dist = point_distance(x, y, _npc.x, _npc.y);
+        
+        if (_dist <= 10)
+        {
+            //pode desenhar a tecla 
+            desenho_tecla = true;
+            tecla_index = 0;
+            
+            if (interagir)
+            {
+                //fala do npc
+                _npc.fala();
+            }
+        }
+    }
+}
 
 
 checa_colisao = function()

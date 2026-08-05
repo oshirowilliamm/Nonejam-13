@@ -1,4 +1,3 @@
-PAUSE
 if (!ativo) exit;
 
 interagir();

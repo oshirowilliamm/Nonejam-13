@@ -39,7 +39,7 @@ reinicia_jogo = function()
     //quando o tempo acabar o jogo reinicia
     if (tempo <= 0)
     {
-        game_restart();
+        restart();
         global.inventario = false;
         
         global.item = 
