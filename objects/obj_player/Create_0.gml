@@ -27,7 +27,12 @@ controle_player = function()
     inputs();
     movimento();
     
+    //desenhando a tecla de interação
     desenho_tecla = false;
+    
+    //mudando a direção da sprite
+    if (right) image_xscale = 1;
+    if (left) image_xscale = -1;
     
     //interações
     if (!global.inventario)
