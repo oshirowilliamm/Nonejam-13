@@ -26,9 +26,6 @@
     {"name":"Julio","path":"rooms/rm_game/rm_game.yy",},
     {"name":"Irmas","path":"rooms/rm_game/rm_game.yy",},
     {"name":"Marta","path":"rooms/rm_game/rm_game.yy",},
-    {"name":"Edson","path":"rooms/rm_game/rm_game.yy",},
-    {"name":"Carvalho","path":"rooms/rm_game/rm_game.yy",},
-    {"name":"Enzo","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_431B9F8F","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_1DB7FC29","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_41A331BA","path":"rooms/rm_game/rm_game.yy",},
@@ -41,7 +38,6 @@
     {"name":"inst_190F0FA7","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_163BD011","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_3BB4440A","path":"rooms/rm_game/rm_game.yy",},
-    {"name":"inst_7014BB86","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_188185F6","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_3A108C06","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_59A73DA4","path":"rooms/rm_game/rm_game.yy",},
@@ -52,6 +48,10 @@
     {"name":"inst_368F179","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_6DF4F929","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_2391B221","path":"rooms/rm_game/rm_game.yy",},
+    {"name":"inst_1D3EE404","path":"rooms/rm_game/rm_game.yy",},
+    {"name":"inst_44E3EA48","path":"rooms/rm_game/rm_game.yy",},
+    {"name":"inst_258A3BCA","path":"rooms/rm_game/rm_game.yy",},
+    {"name":"inst_5C6A57FA","path":"rooms/rm_game/rm_game.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -81,14 +81,18 @@
         {"$GMRInstance":"v4","%Name":"Marta","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"Marta","objectId":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},"propertyId":{"name":"sprite","path":"objects/obj_npc/obj_npc.yy",},"resource":{"name":"spr_marta","path":"sprites/spr_marta/spr_marta.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_marta",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":539.0,"y":189.0,},
-        {"$GMRInstance":"v4","%Name":"Edson","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"Edson","objectId":{"name":"obj_policial","path":"objects/obj_policial/obj_policial.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":291.0,"y":191.0,},
-        {"$GMRInstance":"v4","%Name":"Carvalho","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"Carvalho","objectId":{"name":"obj_policial","path":"objects/obj_policial/obj_policial.yy",},"properties":[
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_policial","path":"objects/obj_policial/obj_policial.yy",},"propertyId":{"name":"sprite","path":"objects/obj_policial/obj_policial.yy",},"resource":{"name":"spr_carvalho","path":"sprites/spr_carvalho/spr_carvalho.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_carvalho",},
-          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":354.0,"y":297.0,},
-        {"$GMRInstance":"v4","%Name":"Enzo","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"Enzo","objectId":{"name":"obj_policial","path":"objects/obj_policial/obj_policial.yy",},"properties":[
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_policial","path":"objects/obj_policial/obj_policial.yy",},"propertyId":{"name":"sprite","path":"objects/obj_policial/obj_policial.yy",},"resource":{"name":"spr_enzo","path":"sprites/spr_enzo/spr_enzo.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_enzo",},
+        {"$GMRInstance":"v4","%Name":"inst_1D3EE404","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1D3EE404","objectId":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},"propertyId":{"name":"sprite","path":"objects/obj_npc/obj_npc.yy",},"resource":{"name":"spr_edson","path":"sprites/spr_edson/spr_edson.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_edson",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":292.0,"y":191.0,},
+        {"$GMRInstance":"v4","%Name":"inst_44E3EA48","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_44E3EA48","objectId":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},"propertyId":{"name":"sprite","path":"objects/obj_npc/obj_npc.yy",},"resource":{"name":"spr_enzo","path":"sprites/spr_enzo/spr_enzo.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_enzo",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":291.0,"y":297.0,},
-        {"$GMRInstance":"v4","%Name":"inst_7014BB86","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7014BB86","objectId":{"name":"obj_garcom","path":"objects/obj_garcom/obj_garcom.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":417.0,"y":191.0,},
+        {"$GMRInstance":"v4","%Name":"inst_258A3BCA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_258A3BCA","objectId":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},"propertyId":{"name":"sprite","path":"objects/obj_npc/obj_npc.yy",},"resource":{"name":"spr_carvalho","path":"sprites/spr_carvalho/spr_carvalho.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_carvalho",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":353.0,"y":297.0,},
+        {"$GMRInstance":"v4","%Name":"inst_5C6A57FA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5C6A57FA","objectId":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},"propertyId":{"name":"sprite","path":"objects/obj_npc/obj_npc.yy",},"resource":{"name":"spr_garcom","path":"sprites/spr_garcom/spr_garcom.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_garcom",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":417.0,"y":191.0,},
       ],"layers":[],"name":"NPCs","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"sq_abelha","assets":[],"depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"sq_abelha","properties":[],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Abelha","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Abelha","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
