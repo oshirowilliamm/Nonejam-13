@@ -119,7 +119,6 @@ pegando_item = function()
             }
         }
     }
-    
 }
 
 usando_item = function()

@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Elementos",
-    "path":"folders/Sprites/Elementos.yy",
+    "name":"Reacao1",
+    "path":"folders/Sprites/Elementos/Reacao1.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

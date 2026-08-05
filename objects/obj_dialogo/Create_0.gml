@@ -8,14 +8,15 @@ xscale = 0;
 yscale = escala;
 
 //estado
-estado = "fechado";
+estado = "abrindo";
 
 //texto do dialogo
-dialogo = "Lorem [c_red]Ipsum[/c] é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.";
+lista_textos = [];
+linha = 0;
 
 //criando o typist
 typist = scribble_typist();
-typist.in(.5, 10); //configurando velocidade da digitação
+typist.in(1.5, 10); //configurando velocidade da digitação
 
 
 
@@ -37,6 +38,9 @@ desenha_dialogo = function()
 
 caixa_abrindo = function(_x, _y)
 {
+    //pausando jogo
+    global.pause = true;
+    
     //efeito de crescimento da caixa
     xscale = lerp(xscale, xscale_fim + 15, .05);
     alpha = lerp(alpha, 1, .1);
@@ -60,10 +64,31 @@ caixa_aberto = function(_x, _y)
     //desenhando dialogo
     texto_dialogo(_x, _y);
     
-    //indo pro fechando
-    if (keyboard_check_pressed(ord("F")))
+    //avançando texto
+    if (keyboard_check_pressed(vk_space))
     {
-        estado = "fechando";
+        //se o texto não terminou, pula pro final
+        if (typist.get_state() < 1)
+        {
+            typist.skip();
+        }
+        //texto ja terminou de escrever
+        else
+        {
+            if (linha < array_length(lista_textos) - 1)
+            {
+                //pulando linha
+                linha++;
+                
+                //reiniciando o escrevente
+                typist.reset();
+            }
+            //saindo do estado
+            else
+            {
+                estado = "fechando";
+            }
+        }
     }
 }
 
@@ -81,6 +106,12 @@ caixa_fechando = function (_x, _y)
     {
         xscale = 0;
         estado = "fechado";
+        
+        //despausando jogo
+        global.pause = false;
+        
+        //se destroi
+        instance_destroy();
     }
 }
 
@@ -94,11 +125,19 @@ texto_dialogo = function(_x, _y)
     var _larg = (sprite_get_width(spr_caixa_dialogo) * xscale) - _margem;
     
     //texto com scribble
-    var _txt = scribble(dialogo).starting_format("fnt_dialogo", c_white);
+    var _txt = scribble(lista_textos[linha]).starting_format("fnt_dialogo", c_white);
     _txt = _txt.wrap(_larg); //fazendo o wrap do texto
-    _txt = _txt.line_height(30);
+    _txt = _txt.line_height(40);
     
     //desenhando o texto
     _txt.draw(_xtxt, _ytxt, typist);
+    
+    
+    //desenhando aviso
+    if (typist.get_state() >= 1) //se terminou de escrever
+    {
+        var _txt = "[wheel][c_grey]Aperte [rainbow]Espaço[/rainbow] para avançar[/c][/wheel]";
+        var _scrb = scribble(_txt).starting_format("fnt_dialogo", c_white);
+        _scrb.draw(430, 230);
+    }
 }
-

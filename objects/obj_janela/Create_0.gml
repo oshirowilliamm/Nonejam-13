@@ -7,16 +7,23 @@ alcance = 20;
 
 interagir = function()
 {
-    if (sprite == spr_janela_enferrujada) exit;
-    
-    //deixando de ser interagivel
-    interagivel = false;
-    
-    //abrindo a janela
-    image_speed = 1;
-    if (image_index == 4) 
+    if (sprite == spr_janela_enferrujada)
     {
-        image_speed = 0;
-        image_index = 4;
+        //criando o dialogo so se ele n foi criado
+        if (!instance_exists(obj_dialogo))
+        {
+            var _dialogo = instance_create_layer(x, y, "Dialogo", obj_dialogo);
+            _dialogo.lista_textos = global.dialogos.janela;
+        }
     }
+    else
+    {
+        //deixando de ser interagivel
+        interagivel = false;
+        
+        //abrindo a janela
+        image_speed = 1;
+    }
+    
+    show_debug_message(image_index);
 }

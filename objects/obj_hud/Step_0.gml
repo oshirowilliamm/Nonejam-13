@@ -1,5 +1,5 @@
-//diminuindo tempo
-tempo = clamp(tempo, 0, tempo--);
+PAUSE
+reinicia_jogo();
 
 
 //debug
