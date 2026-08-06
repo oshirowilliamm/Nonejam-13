@@ -5,3 +5,5 @@ pausar = function()
         global.pause = !global.pause;
     }
 }
+
+show_debug_overlay(true);

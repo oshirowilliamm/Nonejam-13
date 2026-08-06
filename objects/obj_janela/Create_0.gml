@@ -24,6 +24,4 @@ interagir = function()
         //abrindo a janela
         image_speed = 1;
     }
-    
-    show_debug_message(image_index);
 }

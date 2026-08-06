@@ -1,0 +1,2 @@
+PAUSE
+hspeed = -1;

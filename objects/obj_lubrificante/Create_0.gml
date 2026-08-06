@@ -11,5 +11,8 @@ alvo_alcance = 20;
 reacao = function()
 {
     //usar o lubrificante para desenferrujar a janela
-    alvo.sprite = spr_janela;
+    if (alvo.sprite == spr_janela_enferrujada)
+    {
+        alvo.sprite = spr_janela;
+    }
 }

@@ -199,8 +199,8 @@ interage_npc = function()
     //pegando o npc mais perto
     var _npc = instance_nearest(x, y, obj_npc);
     
-    //se existe
-    if (_npc)
+    //se existe e é interagivel
+    if (_npc && _npc.interagivel)
     {
         //pegando a distancia
         var _dist = point_distance(x, y, _npc.x, _npc.y);

@@ -1,1 +1,0 @@
-definindo_texto_npc();
