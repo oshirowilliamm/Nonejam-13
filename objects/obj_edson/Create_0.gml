@@ -122,7 +122,7 @@ atirando = function()
         if (alarm[1] < 0)
         {
             //dando um tempo pra mudar de estado
-            alarm[1] = game_get_speed(gamespeed_fps) * .5;
+            alarm[1] = .5 * FPS;
         }
         
         ja_atirou = true;

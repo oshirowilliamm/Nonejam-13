@@ -1,4 +1,4 @@
-event_inherited();
+PAUSE
 
 definindo_destino();
 definindo_trajeto();

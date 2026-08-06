@@ -1,17 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"obj_bala",
+  "%Name":"obj_garcom",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_bala",
+  "name":"obj_garcom",
   "overriddenProperties":[],
   "parent":{
     "name":"Entidades",
     "path":"folders/Objects/Entidades.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_npc",
+    "path":"objects/obj_npc/obj_npc.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bala",
-    "path":"sprites/spr_bala/spr_bala.yy",
+    "name":"spr_garcom",
+    "path":"sprites/spr_garcom/spr_garcom.yy",
   },
   "spriteMaskId":null,
   "visible":true,

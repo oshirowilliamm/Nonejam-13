@@ -1,5 +1,6 @@
 // Inherit the parent event
 event_inherited();
+PAUSE
 
 if (keyboard_check_pressed(vk_enter)) global.abelha_no_vaso = true;
 

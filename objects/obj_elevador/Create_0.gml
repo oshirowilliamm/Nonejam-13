@@ -8,7 +8,7 @@ y_comeco = 194;
 y_fim = 300;
 
 //tempo
-tempo = game_get_speed(gamespeed_fps) * 2;
+tempo = 2 * FPS;
 timer = tempo;
 
 movimento = function()

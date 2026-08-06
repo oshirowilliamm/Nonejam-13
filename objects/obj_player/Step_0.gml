@@ -1,3 +1,2 @@
-event_inherited();
-
+PAUSE
 controle_player();

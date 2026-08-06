@@ -1,1 +1,1 @@
-timer = game_get_speed(gamespeed_fps) * .5;
+timer = .5 * FPS;
