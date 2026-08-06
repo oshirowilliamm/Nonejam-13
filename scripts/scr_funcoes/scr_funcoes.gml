@@ -26,7 +26,8 @@ function restart()
     global.acabou_reacao1 = false;
     
     //reação 2
-    global.trem_tremeu = false
+    global.trem_tremeu = false;
+    global.alavanca_1 = false;
 }
 
 //cria exclamação
