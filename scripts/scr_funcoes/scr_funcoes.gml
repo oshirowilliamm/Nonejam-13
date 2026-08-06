@@ -28,6 +28,7 @@ function restart()
     //reação 2
     global.trem_tremeu = false;
     global.alavanca_1 = false;
+    global.alavanca_2 = false;
     global.rato_chegou = false;
     global.elefante_bateu = false;
 }

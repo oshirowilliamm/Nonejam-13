@@ -95,21 +95,39 @@ define_estado = function()
         //caindo dentro da tubulação
         case 1:
         {
-            //aplicando gravidade
-            vspd = min(vspd + grav, max_vspd);
-            y += vspd;
-            
-            //mudando o xscale no meio do caminho
-            if (y > dest_y / 2) image_xscale = -1;
-            
-            //qnd chegar no chão
-            if (y >= dest_y)
+            //se tem vento
+            if (!global.alavanca_2)
             {
-                //evitando que entre dentro do chão
-                y = dest_y;
-                vspd = 0;
+                //vai pra cima
+                if (y >= 116)
+                {
+                    y--;
+                }
+                //colide com o teto
+                else
+                {
+                    y = 116;
+                }
+            }
+            //se não tem vento
+            else
+            {
+                //aplicando gravidade
+                vspd = min(vspd + grav, max_vspd);
+                y += vspd;
                 
-                estado = 2;
+                //mudando o xscale no meio do caminho
+                if (y > dest_y / 2) image_xscale = -1;
+                
+                //qnd chegar no chão
+                if (y >= dest_y)
+                {
+                    //evitando que entre dentro do chão
+                    y = dest_y;
+                    vspd = 0;
+                    
+                    estado = 2;
+                }
             }
             
             break;
