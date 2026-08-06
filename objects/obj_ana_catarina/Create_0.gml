@@ -8,9 +8,11 @@ exclamacao = function()
     //gritando
     if (!grito)
     {
-        exclamacao_npc();
-        
+        cria_exclamacao();
         grito = true;
+        
+        //deixa de ser interagivel
+        interagivel = false;
     }
 }
 

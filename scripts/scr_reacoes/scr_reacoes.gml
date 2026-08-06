@@ -10,3 +10,5 @@ global.acabou_reacao1 = false;
 
 global.trem_tremeu = false;
 global.alavanca_1 = false;
+global.rato_chegou = false;
+global.elefante_bateu = false;

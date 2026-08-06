@@ -14,7 +14,7 @@ pulo = function()
     //se nao ta no chao, aplica gravidade
     if (!_chao)
     {
-        vspd = clamp(vspd, vspd + grav, max_vspd);
+        vspd = min(vspd + grav, max_vspd);
     }
     //se ta no chao, nao pula mais
     else

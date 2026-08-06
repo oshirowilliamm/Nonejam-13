@@ -47,9 +47,11 @@ exclamacao = function()
     
     if (!exclama)
     {
-        exclamacao_npc();
-        
+        cria_exclamacao();
         exclama = true;
+        
+        //deixa de ser interagivel
+        interagivel = false;
     }
 }
 

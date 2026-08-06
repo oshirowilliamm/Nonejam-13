@@ -72,6 +72,6 @@ global.dialogos.npc =
         ["player", "Que Mário?"],
         ["garcom", "[wave][c_grey]...[/c][/wave]"],
         ["player", "[wave][c_grey]...[/c][/wave]"],
-        ["garcom", "O Monsieur Mário foi ao toilette agora, oui? Estou apenas esperando por ele."],
+        ["garcom", "O Monsieur Mário foi ao toilette agora, oui? Estou apenas esperrando por ele."],
     ],
 }

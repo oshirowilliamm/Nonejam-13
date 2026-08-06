@@ -71,7 +71,7 @@ movimento = function()
     //aplicando gravidade
     if (!chao)
     {
-        vspd = clamp(vspd, vspd + grav, max_vspd);
+        vspd = min(vspd + grav, max_vspd);
     }
     //no chão
     else

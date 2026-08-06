@@ -28,16 +28,15 @@ function restart()
     //reação 2
     global.trem_tremeu = false;
     global.alavanca_1 = false;
+    global.rato_chegou = false;
+    global.elefante_bateu = false;
 }
 
 //cria exclamação
-function exclamacao_npc()
+function cria_exclamacao(_x = x, _y = y - 10)
 {
     //criando exclamação
-    instance_create_layer(x, y - 10, layer, obj_exclamacao);
-    
-    //deixa de ser interagivel
-    interagivel = false;
+    instance_create_layer(_x, _y, layer, obj_exclamacao);
     
     //se tiver um dialogo acontecendo, desliga
     if (instance_exists(obj_dialogo))
@@ -46,6 +45,6 @@ function exclamacao_npc()
         global.pause = false;
     }
     
-    //depois de um tempo, o sprite dela muda
+    //depois de um tempo, acontece algo
     alarm[0] = .5 * FPS;
 }

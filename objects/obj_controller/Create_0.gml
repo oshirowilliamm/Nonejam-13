@@ -28,7 +28,7 @@ controla_tempo = function()
 trem_treme = function()
 {
     //quando for 40s, balança
-    if (global.timer < 55 * FPS && !global.trem_tremeu)
+    if (global.timer <= 40 * FPS && !global.trem_tremeu)
     {
         screenshake(50);
         global.trem_tremeu = true;
