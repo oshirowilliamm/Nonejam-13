@@ -3,7 +3,10 @@ event_inherited();
 
 subida_y = 170;
 chao_y = 188;
+
+//variaveis de controle
 subiu = false;
+criou_queijo = false;
 
 
 tropecando = function()
@@ -22,7 +25,11 @@ tropecando = function()
         x -= 1;
         
         //criando o queijo
-        
+        if (!criou_queijo)
+        {
+            instance_create_layer(x, y, "Elementos", obj_queijo);
+            criou_queijo = true;
+        }
         
         //avisando q subiu
         if (y <= subida_y) subiu = true;

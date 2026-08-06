@@ -1,4 +1,4 @@
-show_debug_overlay(true);
+show_debug_overlay(0);
 
 
 
@@ -13,6 +13,7 @@ pausar = function()
 
 controla_tempo = function()
 {
+    PAUSE
     //diminuindo tempo
     global.timer = clamp(global.timer, 0, global.timer--);
     
@@ -27,7 +28,7 @@ controla_tempo = function()
 trem_treme = function()
 {
     //quando for 40s, balança
-    if (global.timer < 58 * FPS && !global.trem_tremeu)
+    if (global.timer < 55 * FPS && !global.trem_tremeu)
     {
         screenshake(50);
         global.trem_tremeu = true;
