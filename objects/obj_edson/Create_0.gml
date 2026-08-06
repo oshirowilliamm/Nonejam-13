@@ -95,9 +95,6 @@ correndo = function()
             x = novo_dest_x;
             y = dest_y - 2;
             
-            //criando um coração em cima dele
-            
-            
             //acabando
             global.acabou_reacao1 = true;
         }
