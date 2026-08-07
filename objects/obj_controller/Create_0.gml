@@ -1,4 +1,4 @@
-show_debug_overlay(0);
+show_debug_overlay(1);
 
 
 

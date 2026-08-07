@@ -33,8 +33,8 @@
   "nineSlice":null,
   "origin":1,
   "parent":{
-    "name":"Cenario",
-    "path":"folders/Sprites/Cenario.yy",
+    "name":"Interagivel",
+    "path":"folders/Sprites/Cenario/Interagivel.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

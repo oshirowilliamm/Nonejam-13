@@ -1,5 +1,5 @@
 ativo = false;
-alcance = 5;
+alcance = 10;
 
 interagir = function()
 {
