@@ -10,7 +10,7 @@ pulou = false;
 pulo = function()
 {
     vspd = min(vspd + grav, max_vspd);
-
+    
     y += vspd;
     x += hspd; 
 }

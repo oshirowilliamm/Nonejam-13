@@ -27,8 +27,10 @@ controla_tempo = function()
 //balanco do trem
 trem_treme = function()
 {
-    //quando for 40s, balança
-    if (global.timer <= 59 * FPS && !global.trem_tremeu)
+    //quando for 46s, balança
+    var _tempo_certo = 49;
+    
+    if (global.timer <= _tempo_certo * FPS && !global.trem_tremeu)
     {
         screenshake(20);
         global.trem_tremeu = true;
