@@ -136,11 +136,8 @@ usando_item = function()
     //checando se o alvo existe
     if (instance_exists(alvo)) 
     {
-        //pegando alvo
-        var _inst_alvo = instance_nearest(x, y, alvo);
-        
         //pegando distancia com o alvo
-        var _dist = point_distance(x, y, _inst_alvo.x, _inst_alvo.y);
+        var _dist = point_distance(x, y, alvo.x, alvo.y);
         
         if (_dist <= alvo_alcance)
         {

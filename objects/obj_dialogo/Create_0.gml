@@ -10,6 +10,10 @@ yscale = escala;
 //estado
 estado = "abrindo";
 
+//função
+callback = noone;
+proximo_item = noone;
+
 //texto do dialogo
 lista_textos = [];
 linha = 0;
@@ -130,6 +134,12 @@ caixa_fechando = function (_x, _y)
         
         //despausando jogo
         global.pause = false;
+        
+        //chamando função se tiver
+        if (callback != noone)
+        {
+            callback();
+        }
         
         //se destroi
         instance_destroy();

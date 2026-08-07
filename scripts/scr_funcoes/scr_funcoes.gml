@@ -31,6 +31,10 @@ function restart()
     global.alavanca_2 = false;
     global.rato_chegou = false;
     global.elefante_bateu = false;
+    
+    //reação 3
+    global.valvula_ligada = false;
+    global.explosao = false;
 }
 
 //cria exclamação
@@ -48,4 +52,17 @@ function cria_exclamacao(_x = x, _y = y - 10)
     
     //depois de um tempo, acontece algo
     alarm[0] = .5 * FPS;
+}
+
+//cria dialogo
+function cria_dialogo(_texto)
+{
+    if (!instance_exists(obj_dialogo))
+    {
+        //criando dialogo
+        var _dialogo = instance_create_layer(x, y, "Dialogo", obj_dialogo);
+        _dialogo.lista_textos = _texto;
+        
+        return _dialogo;
+    }
 }

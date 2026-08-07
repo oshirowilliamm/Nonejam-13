@@ -6,6 +6,11 @@ global.dialogos.player =
     [
         ["player", "Acho que não consigo abrir essa janela, ela está [c_orange]emperrada[/c]. Vou precisar de algo pra destravar isso."]
     ],
+    cafeteira:
+    [
+        ["player", "Café?"],
+        ["player", "Não preciso de café agora."],
+    ],
 }
 
 global.dialogos.especial =
@@ -25,31 +30,33 @@ global.dialogos.especial =
     ]
 }
 
+
 global.dialogos.npc =
 {
+    //dialogos normais
     lara:
     [
-        ["lara", "OI"],
+        ["lara", "OI, sou Lara"],
     ],
     caroline:
     [
-        ["caroline", "OI"],
+        ["caroline", "OI, sou Caroline"],
     ],
     ana_catarina:
     [
-        ["ana_catarina", "OI"],
+        ["ana_catarina", "OI, sou Ana Catarina"],
     ],
     julio:
     [
-        ["julio", "OI"],
+        ["julio", "OI, sou Júlio"],
     ],
     irmas:
     [
-        ["irmas", "OI"],
+        ["irmas", "OI, somos as Irmãs Demais"],
     ],
     marta:
     [
-        ["marta", "OI"],
+        ["marta", "OI, sou Marta"],
     ],
     edson:
     [
@@ -57,11 +64,11 @@ global.dialogos.npc =
     ],
     enzo:
     [
-        ["policial", "OI"],
+        ["policial", "OI, sou Enzo"],
     ],
     carvalho:
     [
-        ["policial", "OI"],
+        ["policial", "OI, sou Carvalho"],
     ],
     garcom:
     [
@@ -73,5 +80,28 @@ global.dialogos.npc =
         ["garcom", "[wave][c_grey]...[/c][/wave]"],
         ["player", "[wave][c_grey]...[/c][/wave]"],
         ["garcom", "O Monsieur Mário foi ao toilette agora, oui? Estou apenas esperrando por ele."],
+    ],
+    
+    
+    //dialogos reação 3
+    caroline_reacao:
+    [
+        ["caroline", "oi, sou caroline"],
+    ],
+    julio_reacao:
+    [
+        ["julio", "oi, sou julio"],
+    ],
+    irmas_reacao:
+    [
+        ["irmas", "oi, somos as irmãs"],
+    ],
+    marta_reacao:
+    [
+        ["marta", "oi, sou marta"],
+    ],
+    lara_reacao:
+    [
+        ["lara", "oi, sou lara"],
     ],
 }

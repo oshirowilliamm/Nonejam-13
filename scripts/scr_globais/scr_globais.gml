@@ -23,4 +23,7 @@ global.item =
     alvo: noone,
     alvo_alcance: 0,
     highlight: noone,
+    
+    dialogo: noone,
+    proximo_item: noone
 }
