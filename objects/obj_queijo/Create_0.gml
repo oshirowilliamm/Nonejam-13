@@ -1,28 +1,16 @@
 //ao ser criado vai ir pra cima
-max_vspd    = 5;
+max_vspd    = 4;
 vspd        = -max_vspd;
 hspd        = .3;
-grav        = .2;
+grav        = .1;
 
 
 pulou = false;
 
 pulo = function()
 {
-    var _chao = place_meeting(x, y, obj_colisao);
-    
-    //se nao ta no chao, aplica gravidade
-    if (!_chao)
-    {
-        vspd = min(vspd + grav, max_vspd);
-    }
-    //se ta no chao, nao pula mais
-    else
-    {
-        vspd = 0;
-        hspd = 0;
-    }
-    
+    vspd = min(vspd + grav, max_vspd);
+
     y += vspd;
     x += hspd; 
 }

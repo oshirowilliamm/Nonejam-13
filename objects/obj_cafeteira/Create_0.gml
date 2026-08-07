@@ -2,8 +2,10 @@
 event_inherited();
 
 alcance = 20;
-guarda_move = false;
+desenha_timer = false;
 
+tempo = 3 * FPS;
+timer_desenho = tempo;
 
 interagir = function()
 {
@@ -12,7 +14,9 @@ interagir = function()
 
 timer = function()
 {
-    alarm[0] = game_get_speed(gamespeed_fps) * 3;
+    alarm[0] = tempo;
+    
+    desenha_timer = true;
 }
 
 explodindo = function()
@@ -35,7 +39,7 @@ explodindo = function()
     }
     
     //criando fogo
-    instance_create_layer(509, 218, "Cenario", obj_fogo);
+    instance_create_depth(509, 218, -1, obj_fogo);
     
     //avisando q explodiu
     global.explosao = true;

@@ -2,20 +2,20 @@
   "$GMObject":"",
   "%Name":"obj_flor_morta",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_flor_morta",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_interagivel","path":"objects/obj_interagivel/obj_interagivel.yy",},"propertyId":{"name":"interagivel","path":"objects/obj_interagivel/obj_interagivel.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
+  ],
   "parent":{
     "name":"Reacao1",
     "path":"folders/Objects/Elementos/Reacao1.yy",
   },
   "parentObjectId":{
-    "name":"obj_pegando",
-    "path":"objects/obj_pegando/obj_pegando.yy",
+    "name":"obj_interagivel",
+    "path":"objects/obj_interagivel/obj_interagivel.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -30,9 +30,7 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[
-    {"$GMObjectProperty":"v2","%Name":"index","filters":[],"listItems":[],"multiselect":false,"name":"index","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
-  ],
+  "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,

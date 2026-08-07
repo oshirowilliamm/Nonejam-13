@@ -1,0 +1,2 @@
+//restart pela barreira
+restart();

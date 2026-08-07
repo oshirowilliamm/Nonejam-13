@@ -14,7 +14,7 @@ acao = function()
     //criando exclamacao
     if (!exclama)
     {
-        cria_exclamacao(x - 35, y - 25);
+        cria_exclamacao(x - 35, y - 40);
         exclama = true;
     }
     

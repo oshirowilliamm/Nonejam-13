@@ -1,9 +1,18 @@
-//preparando o player pra levar o tiro
-if (linha == 3)
+define_barreira();
+
+
+//avisando o player pra resetar
+if (!instance_exists(obj_dialogo) && linha >= array_length(dialogo)) 
 {
     with (obj_player) 
     {
-    	x = 270;
-        y = 190;
+    	if (alarm[0] < 0) alarm[0] = .5 * FPS;
     }
+}
+
+
+//destruindo a barreira 1
+if (index == 1 && global.explosao)
+{
+    instance_destroy(id);
 }

@@ -7,13 +7,20 @@ chao_y = 188;
 //variaveis de controle
 subiu = false;
 criou_queijo = false;
+exclama = false;
 
 
 tropecando = function()
 {
     //quando o trem tremer, ele tropeça e o queijo voa
     if (!global.trem_tremeu) exit;
-        
+    
+    if (!exclama)
+    {
+        cria_exclamacao(x - 10, y - 35, 1);
+        exclama = true;
+    }
+    
     //parando animação
     image_speed = 0;
     

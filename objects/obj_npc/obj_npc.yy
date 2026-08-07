@@ -6,14 +6,16 @@
   ],
   "managed":true,
   "name":"obj_npc",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_interagivel","path":"objects/obj_interagivel/obj_interagivel.yy",},"propertyId":{"name":"interagivel","path":"objects/obj_interagivel/obj_interagivel.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
+  ],
   "parent":{
     "name":"Entidades",
     "path":"folders/Objects/Entidades.yy",
   },
   "parentObjectId":{
-    "name":"obj_entidade",
-    "path":"objects/obj_entidade/obj_entidade.yy",
+    "name":"obj_interagivel",
+    "path":"objects/obj_interagivel/obj_interagivel.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

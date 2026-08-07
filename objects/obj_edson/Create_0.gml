@@ -1,8 +1,6 @@
 // Inherit the parent event
 event_inherited();
 
-sprite_index = spr_edson;
-
 //variaveis de controle
 exclama = false;
 pode_correr = false
@@ -13,31 +11,14 @@ dest_x = 178;
 dest_y = 191;
 novo_dest_x = dest_x;
 
+sprite_policial = spr_edson_armado;
+
 
 controle_edson = function()
 {
-    sprite_armado();
+    animacao_barreira();
     exclamacao();
     correndo();
-}
-
-sprite_armado = function()
-{
-    //interagindo com a barreira
-    if (instance_exists(obj_barreira))
-    {
-        //se estiver no ultimo dialogo
-        if (obj_barreira.linha >= 3)
-        {
-            atirando();
-            
-            //se n tiver dialogo, restarta
-            if (!instance_exists(obj_dialogo))
-            {
-                restart();
-            }
-        }
-    }
 }
 
 exclamacao = function()

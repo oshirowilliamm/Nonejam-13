@@ -38,10 +38,11 @@ function restart()
 }
 
 //cria exclamação
-function cria_exclamacao(_x = x, _y = y - 10)
+function cria_exclamacao(_x = x, _y = y - 25, _tempo = .5 )
 {
     //criando exclamação
-    instance_create_layer(_x, _y, layer, obj_exclamacao);
+    var _exclama = instance_create_layer(_x, _y, layer, obj_exclamacao);
+    _exclama.timer = _tempo * FPS;
     
     //se tiver um dialogo acontecendo, desliga
     if (instance_exists(obj_dialogo))

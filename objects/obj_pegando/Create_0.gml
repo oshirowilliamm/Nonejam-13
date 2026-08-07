@@ -1,5 +1,5 @@
-// Inherit the parent event
-event_inherited();
+player_interagindo = false;
+alcance = 10;
 
 item_sprite         = noone;
 item_sprite_menor   = noone;
@@ -9,7 +9,7 @@ item_nome           = "";
 alvo = noone;
 alvo_alcance = 0;
 
-interagir = function()
+pegando = function()
 {
     //destruindo o item
     instance_destroy();

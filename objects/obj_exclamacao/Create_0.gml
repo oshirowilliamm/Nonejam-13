@@ -1,1 +1,1 @@
-timer = .5 * FPS;
+timer = 0;

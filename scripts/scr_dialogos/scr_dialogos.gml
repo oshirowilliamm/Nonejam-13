@@ -11,6 +11,11 @@ global.dialogos.player =
         ["player", "Café?"],
         ["player", "Não preciso de café agora."],
     ],
+    porta:
+    [
+        ["player", "Tá trancado."],
+        ["player", "Que merda, acho que vou precisar achar uma [c_yellow]chave[/c]."],
+    ],
 }
 
 global.dialogos.especial =
@@ -27,7 +32,12 @@ global.dialogos.especial =
     barreira3:
     [
         ["policial", "[shake][c_red]SAIA DAQUI!![/c][/shake]"]
-    ]
+    ],
+    barreira_elevador:
+    [
+        ["policial", "O que está fazendo aqui? Não pode ficar aqui."],
+        ["policial", "[shake][c_red]SAIA!![/c][/shake]"]
+    ],
 }
 
 

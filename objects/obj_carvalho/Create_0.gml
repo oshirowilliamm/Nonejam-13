@@ -6,11 +6,15 @@ x_escada = 349;
 y_escada = 297;
 
 dest_y = 229;
-dest_x = 363;
+dest_x = 390;
+
+sprite_policial = spr_carvalho_armado;
 
 //variaveis de controle
 exclama = false;
 escada = false;
+parede = false;
+
 
 define_estado = function()
 {
@@ -24,7 +28,7 @@ define_estado = function()
         {
             if (!exclama)
             {
-                cria_exclamacao(x, y - 10); //cria um alarm[0]
+                cria_exclamacao(); //cria um alarm[0]
                 exclama = true;
             }
             
@@ -89,6 +93,13 @@ define_estado = function()
                 sprite_index = spr_carvalho;
                 image_xscale = -1;
                 x = dest_x;
+                
+                //criando parede de colisao atras
+                if (!parede)
+                {
+                    instance_create_layer(368, 204, layer, obj_colisao);
+                    parede = true;
+                }
             }
             
             break;

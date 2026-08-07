@@ -1,5 +1,5 @@
-if (!ativo) exit;
+if (!player_interagindo) exit;
 
 interagir();
 
-ativo = false
+player_interagindo = false

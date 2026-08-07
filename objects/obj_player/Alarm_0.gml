@@ -1,0 +1,2 @@
+//morte pela barreira
+restart();

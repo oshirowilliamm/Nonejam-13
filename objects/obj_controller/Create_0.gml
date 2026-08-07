@@ -15,7 +15,7 @@ controla_tempo = function()
 {
     PAUSE
     //diminuindo tempo
-    global.timer = clamp(global.timer, 0, global.timer--);
+    global.timer = clamp(global.timer, 0, global.timer - .5);
     
     //quando o tempo acabar o jogo reinicia
     if (global.timer <= 0)
@@ -28,9 +28,9 @@ controla_tempo = function()
 trem_treme = function()
 {
     //quando for 40s, balança
-    if (global.timer <= 40 * FPS && !global.trem_tremeu)
+    if (global.timer <= 59 * FPS && !global.trem_tremeu)
     {
-        screenshake(50);
+        screenshake(20);
         global.trem_tremeu = true;
     }
 }
