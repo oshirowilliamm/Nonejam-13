@@ -1,5 +1,14 @@
-show_debug_overlay(1);
+show_debug_overlay(0);
 
+
+
+//setando cores novas
+scribble_color_set("pink", #d77bba);
+scribble_color_set("police", #3F3F74);
+scribble_color_set("ana", #7C1E1E);
+scribble_color_set("irma_red", #C50A0A);
+scribble_color_set("irma_yellow", #E4AE18);
+scribble_color_set("irma_green", #468F14);
 
 
 

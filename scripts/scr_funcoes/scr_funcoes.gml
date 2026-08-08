@@ -1,7 +1,8 @@
+
 //função para restartar o jogo
 function restart()
 {
-    game_restart();
+    cria_transicao_inicia(room);
     
     //resetando as variaveis globais
     //dados

@@ -1,3 +1,5 @@
+draw_self();
+
 //desenhando a tecla
 if (desenho_tecla)
 {

@@ -66,7 +66,7 @@ global.itens_reacao3 =
     },
     grao:
     {
-        nome: "Grão Massivo Atômico",
+        nome: "Grão de Café Cósmico",
         sprite: spr_inv_grao,
         alvo: obj_cafeteira,
         alcance: 20,

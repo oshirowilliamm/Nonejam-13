@@ -14,16 +14,25 @@ interagir = function()
 
 timer = function()
 {
-    alarm[0] = tempo;
-    
-    desenha_timer = true;
+    //so acontece se tiver ligado a valvula
+    if (global.valvula_ligada) 
+    {
+        alarm[0] = tempo;
+        
+        desenha_timer = true;
+    }
+    //se n tiver, o jogador fala
+    else
+    {
+        if (!instance_exists(obj_dialogo))
+        {
+            cria_dialogo(global.dialogos.player.cafeteira_errada);
+        }
+    }
 }
 
 explodindo = function()
 {
-    //so acontece se tiver ligado a valvula
-    if (!global.valvula_ligada) exit;
-    
     screenshake(50);
     
     with (obj_player) 

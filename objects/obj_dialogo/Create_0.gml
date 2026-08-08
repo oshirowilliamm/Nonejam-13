@@ -84,7 +84,7 @@ caixa_abrindo = function(_x, _y)
 caixa_aberto = function(_x, _y)
 {
     //desenhando a caixa
-    draw_sprite_ext(spr_caixa_dialogo, index_caixa, _x, _y, xscale, yscale, 0, c_white, .9);
+    draw_sprite_ext(spr_caixa_dialogo, index_caixa, _x, _y, xscale, yscale, 0, c_white, .98);
     
     //desenhando dialogo
     texto_dialogo(_x, _y);
