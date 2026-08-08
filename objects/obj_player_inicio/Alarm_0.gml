@@ -1,1 +1,1 @@
-dialogo = cria_dialogo(global.dialogos.especial.introducao)
+dialogo = cria_dialogo(global.dialogos.especial.introducao);
