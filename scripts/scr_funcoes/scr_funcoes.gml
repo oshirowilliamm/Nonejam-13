@@ -68,3 +68,9 @@ function cria_dialogo(_texto)
         return _dialogo;
     }
 }
+
+function cria_som(_snd, _p = 0)
+{
+    var _pitch = random_range(1 - _p, 1 + _p);
+    audio_play_sound(_snd, 0, 0, , , _pitch);
+}

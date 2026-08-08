@@ -7,4 +7,3 @@ if (room == rm_game)
     //reseta
     if (keyboard_check_pressed(ord("R"))) restart();
 }
-

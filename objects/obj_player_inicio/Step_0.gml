@@ -10,19 +10,21 @@ if (global.introducao)
 
 
 //fazendo a bruxa sumir
-if (!instance_exists(dialogo)) exit;
-    
-if (dialogo.linha >= 8)
+if (instance_exists(dialogo))
 {
-    with (obj_bruxa) 
+    if (dialogo.linha >= 8)
     {
-    	if (image_alpha > 0)
+        with (obj_bruxa) 
         {
-            image_alpha -= .01;
-        }
-        else
-        {
-            instance_destroy();
+        	if (image_alpha > 0)
+            {
+                image_alpha -= .01;
+            }
+            else
+            {
+                instance_destroy();
+            }
         }
     }
 }
+
