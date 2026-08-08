@@ -70,7 +70,6 @@ inputs = function()
     right       = keyboard_check(ord("D")) || keyboard_check(vk_right);
     left        = keyboard_check(ord("A")) || keyboard_check(vk_left);
     pulo        = keyboard_check_pressed(vk_space);
-    pulo_r      = keyboard_check_released(vk_space);
     interagir   = keyboard_check_pressed(ord("E"));
 }
 

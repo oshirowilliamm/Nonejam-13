@@ -23,7 +23,11 @@ desenha_relogio = function()
 desenha_pocao = function()
 {
     var _x = display_get_gui_width() - 80;
-    var _y = display_get_gui_height() - 100;
+    var _y = display_get_gui_height() - 50;
     
+    //poção
     draw_sprite_ext(spr_pocao, 0, _x, _y, escala, escala, 0, c_white, 1);
+    
+    //tecla
+    draw_sprite_ext(spr_tecla, 1, _x - 40, _y, escala, escala, 0, c_white, 1);
 }

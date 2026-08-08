@@ -32,21 +32,42 @@ global.dialogos.especial =
     ],
     barreira2:
     [
-        ["policial", "Eu já disse que [shake][c_red]VOCÊ[/c][/shake] não pode passar, não insista de novo!"]
+        ["policial", "Eu já disse que [shake][c_red][scale, 1.25]VOCÊ[/scale][/c][/shake] não pode passar, não insista de novo!"]
     ],
     barreira3:
     [
-        ["policial", "[shake][c_red]SAIA DAQUI!![/c][/shake]"]
+        ["policial", "[shake][c_red][scale, 1.75]SAIA DAQUI!![/][/][/]"]
     ],
     barreira_elevador:
     [
         ["policial", "O que está fazendo aqui? Não pode ficar aqui."],
-        ["policial", "[shake][c_red]SAIA!![/c][/shake]"]
+        ["policial", "[shake][c_red][scale, 1.75]SAIA!![/][/c][/shake]"]
     ],
     reacao_errada:
     [
-        ["npc", "O que? Por que está me dando isso? Não, valeu..."]
+        ["npc", "O que? Por que está me dando isso? Não, quero valeu..."]
     ],
+    garcom_caido:
+    [
+        ["garcom", "[shake][slant][c_grey]Sacrebleu![/][/slant] [slant]Non[/slant] acredito nisso![/]"],
+        ["garcom", "Meu [c_yellow]queijo[/] caiu pela janela![delay, 200] O queijo do [slant]Monsieur[/slant] Mário!"],
+        ["garcom", "Ele vai ficar [shake][c_red]furioso[/c][/shake] comigo![delay, 250] [wave]E agora, [slant]oui?[/slant][/wave]"],
+        ["garcom", "Eu devia ter [#00FF88][wave]pegado ele antes que caísse pra fora da janela![/wave][/]"],
+    ],
+    introducao:
+    [
+        ["bruxa", "[shake][c_gray]Psst![/][/shake] Ei, garoto... os ponteiros já estão girando."],
+        ["player", "Ahn? Falou comigo?"],
+        ["bruxa", "Escute bem! Em exatos [c_red][shake][scale, 1.5]60[/scale] segundos[/shake][/c], esse trem inteiro irá explodir!"],
+        ["player", "Tá pirada, fia?"],
+        ["bruxa", "Não temos tempo! Beba a [#46A5DC][wave][scale, 1.25]Poção Borboleta[/][/wave][/]. Ela faz o tempo [#46A5DC]voltar[/c] quando o pior acontece."],
+        ["bruxa", "O relógio reseta, mas a sua mente não. [c_yellow]Bata as asas, mude o destino e ache uma saída![/c]"],
+        ["player", "Que papo torto é es-"],
+        ["bruxa", "[shake][c_gray]Tique-taque...[/][/shake] Boa sorte."],
+        ["player", "Mas que mulher maluca. Ué... ela sumiu?"],
+        ["player", "[wave][c_grey]...[/c][/wave]"],
+        ["player", "Pera aí. [c_orange][scale, 1.25]Tá sentindo esse cheirinho de fumaça?[/scale][/c]"],
+    ]
 }
 
 

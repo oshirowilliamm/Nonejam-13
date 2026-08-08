@@ -2,5 +2,9 @@ pausar();
 controla_tempo();
 trem_treme();
 
-//reseta
-if (keyboard_check_pressed(ord("R"))) restart();
+if (room == rm_game)
+{
+    //reseta
+    if (keyboard_check_pressed(ord("R"))) restart();
+}
+

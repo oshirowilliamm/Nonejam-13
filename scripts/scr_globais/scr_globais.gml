@@ -27,3 +27,7 @@ global.item =
     dialogo: noone,
     proximo_item: noone
 }
+
+
+//INTRODUCAO DO JOGO (NÃO REINICIAR)
+global.introducao = false;

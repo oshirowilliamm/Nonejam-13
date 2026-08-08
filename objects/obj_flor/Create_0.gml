@@ -19,6 +19,4 @@ drop_highlight = function()
     _high2.sprite_index = item_sprite_menor;
     _high2.image_index = index;
     _high2.alcance = alcance;
-    
-    return [_high1, _high2];
 }

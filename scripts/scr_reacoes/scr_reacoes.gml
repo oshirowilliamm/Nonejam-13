@@ -39,7 +39,7 @@ global.itens_reacao3 =
     },
     carta:
     {
-        nome: "Carta Amorosa de Edson",
+        nome: "Carta Amorosa",
         sprite: spr_inv_carta,
         alvo: "irmas",
         alcance: 10,

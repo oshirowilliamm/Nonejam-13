@@ -49,6 +49,7 @@ desenha_dialogo = function()
         //mudando a sprite da caixa de acordo com quem fala
     	case "player": index_caixa = 1; break;
         case "policial": index_caixa = 2; break;
+        case "bruxa": index_caixa = 3; break;
         default: index_caixa = 0; break;
     }
     

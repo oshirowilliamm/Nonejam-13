@@ -9,6 +9,8 @@ subiu = false;
 criou_queijo = false;
 exclama = false;
 
+texto = global.dialogos.npc.garcom;
+
 
 tropecando = function()
 {
@@ -65,4 +67,12 @@ tropecando = function()
             image_angle = 90;
         }
     }
+    
+    //mudando dialogo
+    texto = global.dialogos.especial.garcom_caido;
+}
+
+interagir = function()
+{
+    cria_dialogo(texto);
 }

@@ -23,13 +23,21 @@ pausar = function()
 controla_tempo = function()
 {
     PAUSE
+    
     //diminuindo tempo
-    global.timer = clamp(global.timer, 0, global.timer - .5);
+    global.timer = max(0, global.timer - .5);
     
     //quando o tempo acabar o jogo reinicia
     if (global.timer <= 0)
     {
-        restart();
+        if (room == rm_game)
+        {
+            restart();
+        }
+        else
+        {
+            global.timer = 60 * FPS;
+        }
     }
 }
 

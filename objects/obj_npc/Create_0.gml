@@ -2,8 +2,6 @@ event_inherited()
 
 sprite_index = sprite;
 
-texto = [];
-
 //variaveis pra animação da barreira
 sprite_policial = noone;
 
