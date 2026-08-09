@@ -25,14 +25,14 @@ if (pausado)
     for (var i = 0; i < array_length(menu_pause); i++)
     {
         var _cor = c_white;
-        var _escala = .3;
+        var _escala = .4;
         var _texto = menu_pause[i];
         
         //efeito de selecionado
         if (i == atual)
         {
             _cor = c_orange;
-            _escala = .4;
+            _escala = .5;
         }
         
         
@@ -44,8 +44,8 @@ if (pausado)
         
         
         //posição
-        var _espaco = 100;
-        var _y = _ycentro - 100 + (i * _espaco);
+        var _espaco = 120;
+        var _y = _ycentro - _espaco + (i * _espaco);
         
         //texto
         draw_set_colour(_cor);
