@@ -15,7 +15,18 @@ function cria_transicao_inicia(_destino = noone)
     
     //Criando o objeto transição
     var _transicao = instance_create_depth(0, 0, 0, obj_transicao, { destino: _destino});
+}
+
+function cria_transicao_creditos(_destino = noone)
+{
+    if (!room_exists(_destino)) 
+    {
+        show_message("defina um destino")
+        return;
+    }
     
+    //Criando o objeto transição
+    var _transicao = instance_create_depth(0, 0, 0, obj_transicao_creditos, { destino: _destino});
 }
 
 //Função de transição
@@ -32,8 +43,15 @@ function fazendo_transicao(_sq = sq_transicao_1)
     //Pegando a posição da câmera para criar a transição no local correto
     var _cam_x = camera_get_view_x(view_camera[0]);
     var _cam_y = camera_get_view_y(view_camera[0]);
-
+    
     layer_sequence_create("transicao", _cam_x, _cam_y, _sq);
+    
+    //som
+    switch (_sq) 
+    {
+    	case sq_transicao_1: cria_som(snd_borboleta1); break;
+        case sq_transicao_2: cria_som(snd_borboleta2); break;
+    }
 }
 
 

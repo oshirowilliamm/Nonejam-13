@@ -3,6 +3,8 @@ exclama = false;
 pode_correr = false;
 fez_shake = false;
 
+timer_passo = 0;
+
 //destino
 dest_x = 66;
 
@@ -27,6 +29,18 @@ acao = function()
         if (x != dest_x && !global.elefante_bateu)
         {
             x += sign(dest_x - x);
+            
+            //som do passo
+            if (timer_passo <= 0)
+            {
+                audio_play_sound(snd_passo, 0, 0, 8, ,.2);
+                timer_passo = 25;
+            }
+            else
+            {
+                timer_passo--;
+            }
+            
         }
         //chegou no destino
         else
@@ -35,6 +49,8 @@ acao = function()
             if (!fez_shake)
             {
                 screenshake(50);
+                cria_som(snd_batida);
+                
                 fez_shake = true;
             }
             

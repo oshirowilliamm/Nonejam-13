@@ -5,6 +5,7 @@ event_inherited();
 exclama = false;
 pode_correr = false
 ja_atirou = false;
+coracao = false;
 
 //variaveis pro correndo
 dest_x = 178;
@@ -12,6 +13,8 @@ dest_y = 191;
 novo_dest_x = dest_x;
 
 sprite_policial = spr_edson_armado;
+
+timer_passo = 0;
 
 
 controle_edson = function()
@@ -40,7 +43,6 @@ correndo = function()
 {
     if (!pode_correr) exit;
         
-    depth = -1;
     
     //indo ate a ana catarina
     if (x != dest_x)
@@ -77,6 +79,9 @@ correndo = function()
             //parando
             x = novo_dest_x;
             y = dest_y - 2;
+            
+            //mostrando coração
+            coracao = true;
             
             //acabando
             global.acabou_reacao1 = true;

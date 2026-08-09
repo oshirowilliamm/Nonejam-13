@@ -12,5 +12,7 @@ global.item.efeito = function()
     global.item.alvo.image_index = 1;
 }
 
+cria_som(snd_pegando, .1);
+
 //destruindo a chave
 instance_destroy();

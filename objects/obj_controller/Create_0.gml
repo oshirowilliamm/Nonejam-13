@@ -1,4 +1,4 @@
-show_debug_overlay(1);
+show_debug_overlay(0);
 
 
 
@@ -32,11 +32,15 @@ controla_tempo = function()
     {
         if (room == rm_game)
         {
-            restart();
+            //trem explode
+            if (!instance_exists(obj_explosao))
+            {
+                instance_create_layer(0, 0, layer, obj_explosao);
+            }
         }
         else
         {
-            global.timer = 60 * FPS;
+            global.timer = global.tempo_timer;
         }
     }
 }
@@ -45,11 +49,13 @@ controla_tempo = function()
 trem_treme = function()
 {
     //quando for 46s, balança
-    var _tempo_certo = 49;
+    var _tempo_certo = 49 * FPS;
     
-    if (global.timer <= _tempo_certo * FPS && !global.trem_tremeu)
+    if (global.timer <= _tempo_certo && !global.trem_tremeu)
     {
         screenshake(20);
+        cria_som(snd_batida);
+        
         global.trem_tremeu = true;
     }
 }

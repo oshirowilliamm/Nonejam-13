@@ -8,8 +8,8 @@
   "name":"obj_bruxa",
   "overriddenProperties":[],
   "parent":{
-    "name":"Entidades",
-    "path":"folders/Objects/Entidades.yy",
+    "name":"Intro",
+    "path":"folders/Objects/Menu/Intro.yy",
   },
   "parentObjectId":null,
   "persistent":false,

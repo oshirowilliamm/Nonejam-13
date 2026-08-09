@@ -33,13 +33,17 @@ timer = function()
 
 explodindo = function()
 {
+    //avisando q explodiu
+    global.explosao = true;
+    
+    cria_som(snd_explosao_cafeteira);
+    
     screenshake(50);
     
     with (obj_player) 
     {
         //se o player estiver perto, ele morre
     	var _dist = point_distance(x, y, other.x, other.y);
-        show_debug_message(_dist);
         
         if (_dist <= 100)
         {
@@ -48,8 +52,20 @@ explodindo = function()
     }
     
     //criando fogo
-    instance_create_depth(509, 218, -1, obj_fogo);
+    cria_fogo();
+}
+
+cria_fogo = function()
+{
+    //explosao
+    instance_create_depth(489 , 213, -1, obj_explosao_efeito);
     
-    //avisando q explodiu
-    global.explosao = true;
+    //fogo
+    repeat (15) 
+    {
+        var _x = random_range(408, 609);
+        var _fogo = choose(obj_fogo_grande, obj_fogo_pequeno);
+        
+    	instance_create_depth(_x, 215, -1, _fogo);
+    }
 }

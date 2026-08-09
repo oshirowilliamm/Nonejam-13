@@ -18,10 +18,28 @@ parede = false;
 
 define_estado = function()
 {
-    //se explodiu
-    if (!global.explosao) exit;
+    //se nao explodiu, reseta os estados
+    if (!global.explosao)
+    {
+        estado = 0;
+        exclama = false;
+        escada = false;
+        parede = false;
+        
+        // Volta para a posição e sprite originais
+        x = 357;
+        y = 297;
+        sprite_index = spr_carvalho;
+        image_xscale = 1;
+        
+        // Destroi a escada e a parede criadas no loop que falhou
+        if (instance_exists(obj_escada))  instance_destroy(obj_escada);
+        
+        exit;
+    }
     
-    switch (estado) 
+    //se explodiu
+    switch (estado)
     {
         //criando exclamacao
     	case 0:

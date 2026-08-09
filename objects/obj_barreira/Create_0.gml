@@ -55,7 +55,7 @@ colisao_player = function()
                 //empurra o jogador 
                 with (obj_player) 
                 {
-                	x = other.x_tiro;
+                	x -= 5;
                 }
             }
             //acabou o dialogo

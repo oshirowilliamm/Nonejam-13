@@ -23,7 +23,8 @@ index_caixa = 0;
 
 //criando o typist
 typist = scribble_typist();
-typist.in(1.5, 10); //configurando velocidade da digitação
+typist.in(1, 5); //configurando velocidade da digitação
+typist.sound(snd_digitando, .8, .5, .7, .3);
 
 
 
@@ -106,12 +107,15 @@ caixa_aberto = function(_x, _y)
                 //pulando linha
                 linha++;
                 
+                cria_som(snd_bip_dialogo);
+                
                 //reiniciando o escrevente
                 typist.reset();
             }
             //saindo do estado
             else
             {
+                cria_som(snd_bip_dialogo);
                 estado = "fechando";
             }
         }

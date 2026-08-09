@@ -4,4 +4,5 @@ dialogo = cria_dialogo(global.dialogos.especial.introducao);
 dialogo.callback = function()
 {
     instance_create_layer(0, 0, "UI", obj_explosao);
+    global.timer = global.tempo_timer;
 }

@@ -46,11 +46,17 @@ desenha_info_item = function(_x, _y)
     
     draw_sprite_stretched(spr_slot_nome, 0, _xfundo, _yfundo, _wfundo, _hfundo);
     
-    //desenhando nome
     draw_set_halign(1);
     draw_set_valign(1);
     
-    draw_text(_x, _ycentro, _nome);
+    //se for o grão tem efeito
+    if (_nome == "Grão de Café Cósmico")
+    {
+        _nome = "[rainbow]Grão de Café Cósmico[/]";
+    }
+    
+    //desenhando nome
+    draw_text_scribble(_x, _ycentro, _nome);
     
     draw_set_halign(-1);
     draw_set_valign(-1);

@@ -7,7 +7,8 @@ global.pause = false;
 
 
 //timer
-global.timer = 60 * FPS;
+global.tempo_timer = 60 * FPS;
+global.timer = global.tempo_timer;
 
 //checa se tem algum item no inventario ou não
 global.inventario = false;
@@ -27,6 +28,8 @@ global.item =
     dialogo: noone,
     proximo_item: noone
 }
+
+global.resetando = false;
 
 
 //INTRODUCAO DO JOGO (NÃO REINICIAR)

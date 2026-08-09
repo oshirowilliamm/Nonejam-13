@@ -12,5 +12,7 @@ _high.alcance = 15;
 //adicionando o highlight no item
 global.item.highlight = _high;
 
+cria_som(snd_pegando, .1);
+
 //destruindo o queijo
 instance_destroy();

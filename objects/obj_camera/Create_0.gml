@@ -3,8 +3,8 @@ res_w = 640;
 res_h = 360;
 
 //zoom
-zoom_w = res_w / 6;
-zoom_h = res_h / 6;
+zoom_w = res_w / zoom;
+zoom_h = res_h / zoom;
 
 //pegando tamanho da camera
 cam = view_camera[0];
@@ -13,7 +13,7 @@ cam = view_camera[0];
 camera_set_view_size(cam, zoom_w, zoom_h)
 
 //posição da camera
-camera_set_view_pos(cam, 20, 135);
+camera_set_view_pos(cam, pos_x, pos_y);
 
 
 voltando_normal = function()

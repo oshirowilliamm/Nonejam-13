@@ -7,34 +7,44 @@ desenha_relogio = function()
     var _y = 80;
     draw_sprite_ext(spr_relogio, 0, _x, _y, escala, escala, 0, c_white, 1);
     
-    // Desenhando timer
-    // Pegando o tempo como número para podermos fazer os cálculos de cor
+    //desenhando timer
+    //separando os seg e milisseg
     var _seg_num = global.timer div 60;
     var _mili_num = floor(((global.timer % 60) / 60) * 100);
     
-    // Colocando um 0 na frente e transformando em texto
+    //colocando 0 na frente
     var _seg = (_seg_num < 10) ? "0" + string(_seg_num) : string(_seg_num);
     var _mili = (_mili_num < 10) ? "0" + string(_mili_num) : string(_mili_num);
     
-    // --- A MÁGICA: Dinâmica de Cores e Efeitos ---
-    var _efeito = "[c_white]"; // Cor padrão inicial
+    //efeitos 
+    var _efeito = "[c_white]";
     
-    if (_seg_num <= 10) {
-        // 10 segundos finais: Vermelho e Tremendo (Desespero)
+    if (_seg_num <= 10) 
+    {
         _efeito = "[c_red][shake]"; 
-    } else if (_seg_num <= 30) {
-        // 30 segundos finais: Laranja e Pulsando (Aviso/Tensão)
-        _efeito = "[c_orange][pulse]"; 
+    } 
+    else if (_seg_num <= 30) 
+    {
+        _efeito = "[c_orange][shake]"; 
     }
     
-    // Montando o texto: Aplica o efeito nos Segundos, e deixa os milissegundos menores e prateados
-    var _txt = string("{2}[scale, 1.5]{0}[/][c_silver][scale, .6]:{1}[/]", _seg, _mili, _efeito);
+    //texto (segundo)
+    var _txt_seg = string("{1}{0}[/]", _seg, _efeito);
     
-    // Renderizando com Scribble
-    var _scrb = scribble(_txt).starting_format("fnt_relogio", c_white);
-    _scrb.scale(.5);
-    _scrb.align(1, 1);
-    _scrb.draw(_x + 10, _y);
+    //desenhando com o scribble (segundo)
+    var _scrb_seg = scribble(_txt_seg).starting_format("fnt_relogio", c_white);
+    _scrb_seg.scale(.7);
+    _scrb_seg.align(1, 1);
+    _scrb_seg.draw(_x, _y);
+    
+    //texto (milissegundo)
+    var _txt_mili = string("[c_silver].{0}[/]", _mili);
+    
+    //desenhando com o scribble (milissegundo)
+    var _scrb_mili = scribble(_txt_mili).starting_format("fnt_relogio", c_white);
+    _scrb_mili.scale(.25);
+    _scrb_mili.align(1, 1);
+    _scrb_mili.draw(_x + 65, _y + 9);
 }
 
 desenha_pocao = function()

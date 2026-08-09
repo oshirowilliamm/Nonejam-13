@@ -11,8 +11,8 @@
   "name":"obj_player_inicio",
   "overriddenProperties":[],
   "parent":{
-    "name":"Entidades",
-    "path":"folders/Objects/Entidades.yy",
+    "name":"Intro",
+    "path":"folders/Objects/Menu/Intro.yy",
   },
   "parentObjectId":null,
   "persistent":false,

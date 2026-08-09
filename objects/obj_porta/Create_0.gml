@@ -7,11 +7,12 @@ interagir = function()
     if (image_index == 0)
     {
         //dialogo do player
-        cria_dialogo(global.dialogos.player.porta);
+        //cria_dialogo(global.dialogos.player.porta);
+        indo_creditos();
     }
     //se tiver aberta
     else
     {
-        game_end();
+        indo_creditos();
     }
 }

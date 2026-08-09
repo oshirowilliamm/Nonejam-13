@@ -16,6 +16,7 @@ tecla_index = 0;
 //estado
 estado = "parado";
 levanto_tiro = false;
+timer_passo = 0;
 
 //variaveis sobre o item alvo
 alvo = noone;
@@ -67,6 +68,8 @@ controle_player = function()
 
 inputs = function()
 {
+    if (global.resetando) return;
+    
     right       = keyboard_check(ord("D")) || keyboard_check(vk_right);
     left        = keyboard_check(ord("A")) || keyboard_check(vk_left);
     pulo        = keyboard_check_pressed(vk_space);
@@ -85,14 +88,16 @@ movimento = function()
     {
         vspd = min(vspd + grav, max_vspd);
     }
-    //no chão
     else
+    //no chão
     {
         //pulo
         if (pulo)
         {
             vspd = -max_vspd;
             estado = "pulando";
+            
+            cria_som(snd_pulo);
         }
         else
         {
@@ -105,6 +110,8 @@ movimento = function()
     //colidindo
     move_and_collide(hspd, 0, obj_colisao, 4);
     move_and_collide(0, vspd, obj_colisao, 24);
+    
+    
     
     //se colidiu com o teto, cai na hora
     if (vspd < 0 && teto)
@@ -134,6 +141,7 @@ pegando_item = function()
             if (interagir)
             {
                 _prox.player_interagindo = true;
+                cria_som(snd_pegando, .1);
             }
             
             return true;
@@ -164,6 +172,7 @@ devolvendo_item = function()
         {
             //devolvendo pelo obj highlight
             _high.devolvendo();
+            cria_som(snd_devolve, .1);
         }
         
         return true;
@@ -209,6 +218,8 @@ interagindo = function()
                 {
                     _prox.interagir();
                 }
+                
+                cria_som(snd_interagir, .5);
             }
             
             return true;
@@ -233,6 +244,8 @@ checa_sprite = function()
         {
             sprite_index = spr_player_idle;
             
+            timer_passo = 0;
+            
             //mudando de estado
             if (hspd != 0)
             {
@@ -251,6 +264,17 @@ checa_sprite = function()
         case "andando":
         {
             sprite_index = spr_player_run;
+            
+            //som do passo
+            if (timer_passo <= 0)
+            {
+                cria_som(snd_passo, .5);
+                timer_passo = 15;
+            }
+            else
+            {
+                timer_passo--;
+            }
             
             //mudando de estado
             if (hspd == 0)
