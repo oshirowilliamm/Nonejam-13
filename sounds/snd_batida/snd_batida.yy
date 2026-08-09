@@ -14,13 +14,13 @@
   "exportDir":"",
   "name":"snd_batida",
   "parent":{
-    "name":"SFX",
-    "path":"folders/Sounds/SFX.yy",
+    "name":"Trem",
+    "path":"folders/Sounds/SFX/Trem.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_batida.wav",
-  "volume":0.5,
+  "volume":1.0,
 }

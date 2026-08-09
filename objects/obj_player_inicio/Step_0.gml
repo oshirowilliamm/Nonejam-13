@@ -19,6 +19,9 @@ if (instance_exists(dialogo))
         	if (image_alpha > 0)
             {
                 image_alpha -= .01;
+                
+                //tirando a musica
+                cria_soundtrack(noone, 1500);
             }
             else
             {

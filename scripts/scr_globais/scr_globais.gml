@@ -34,3 +34,6 @@ global.resetando = false;
 
 //INTRODUCAO DO JOGO (NÃO REINICIAR)
 global.introducao = false;
+
+global.tela_cheia = window_get_fullscreen();
+global.volume_master = .5;

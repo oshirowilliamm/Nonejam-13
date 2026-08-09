@@ -1,2 +1,0 @@
-voltando_normal();
-

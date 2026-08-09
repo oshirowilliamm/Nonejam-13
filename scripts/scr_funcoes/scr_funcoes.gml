@@ -1,12 +1,7 @@
 
-//função para restartar o jogo
-function restart()
+//função para resetar todas as variaveis globais
+function resetando_globais()
 {
-    global.resetando = true;
-    
-    cria_transicao_inicia(room);
-    
-    //resetando as variaveis globais
     //dados
     global.timer = global.tempo_timer;
     global.pause = false;
@@ -40,46 +35,21 @@ function restart()
     global.explosao = false;
 }
 
-//indo pro creditos
-function indo_creditos()
+//função para restartar o jogo
+function restart()
 {
+    global.resetando = true;
+    
     //resetando as variaveis globais
-    //dados
-    global.timer = 10;
-    global.pause = false;
-    global.inventario = false;
-    global.item = 
-    {
-        sprite: noone,
-        nome: "",
-        obj: noone,
-        efeito: function(){},
-        
-        alvo: noone,
-        alvo_alcance: 0,
-        highlight: noone,
-    }
+    resetando_globais();
     
-    //reação 1
-    global.abelha_no_vaso = false;
-    global.ana_assustada = false;
-    global.acabou_reacao1 = false;
+    //resetando a musica
+    cria_soundtrack(noone, 100);
+    if (instance_exists(obj_audio)) instance_destroy(obj_audio);
     
-    //reação 2
-    global.trem_tremeu = false;
-    global.alavanca_1 = false;
-    global.alavanca_2 = false;
-    global.rato_chegou = false;
-    global.elefante_bateu = false;
-    
-    //reação 3
-    global.valvula_ligada = false;
-    global.explosao = false;
-    
-    //transicao
-    cria_transicao_creditos(rm_creditos);
+    //restart
+    cria_transicao_inicia(room);
 }
-
 
 //cria exclamação
 function cria_exclamacao(_x = x, _y = y - 25, _tempo = .5 )
@@ -118,4 +88,12 @@ function cria_som(_snd, _p = 0)
 {
     var _pitch = random_range(1 - _p, 1 + _p);
     audio_play_sound(_snd, 0, 0, , , _pitch);
+}
+
+function cria_soundtrack(_snd, _gain_ms)
+{
+    if (instance_exists(obj_audio))
+    {
+        obj_audio.transicao_musica(_snd, _gain_ms);
+    }
 }

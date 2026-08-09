@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_explosao",
   "parent":{
-    "name":"SFX",
-    "path":"folders/Sounds/SFX.yy",
+    "name":"Trem",
+    "path":"folders/Sounds/SFX/Trem.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

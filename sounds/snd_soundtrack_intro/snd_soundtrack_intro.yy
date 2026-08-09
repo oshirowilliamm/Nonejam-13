@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_soundtrack_intro",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":862.7461,
+  "exportDir":"",
+  "name":"snd_soundtrack_intro",
+  "parent":{
+    "name":"sondtrack",
+    "path":"folders/Sounds/sondtrack.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_soundtrack_intro.mp3",
+  "volume":0.2,
+}

@@ -14,13 +14,13 @@
   "exportDir":"",
   "name":"snd_borboleta1",
   "parent":{
-    "name":"SFX",
-    "path":"folders/Sounds/SFX.yy",
+    "name":"Transicao Borboleta",
+    "path":"folders/Sounds/SFX/Transicao Borboleta.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_borboleta1.wav",
-  "volume":0.5,
+  "volume":1.0,
 }

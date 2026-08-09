@@ -14,13 +14,13 @@
   "exportDir":"",
   "name":"snd_digitando",
   "parent":{
-    "name":"SFX",
-    "path":"folders/Sounds/SFX.yy",
+    "name":"Dialogo",
+    "path":"folders/Sounds/SFX/Dialogo.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_digitando.wav",
-  "volume":0.5,
+  "volume":1.0,
 }

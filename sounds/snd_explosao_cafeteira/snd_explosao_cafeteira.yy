@@ -14,13 +14,13 @@
   "exportDir":"",
   "name":"snd_explosao_cafeteira",
   "parent":{
-    "name":"SFX",
-    "path":"folders/Sounds/SFX.yy",
+    "name":"Trem",
+    "path":"folders/Sounds/SFX/Trem.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_explosao_cafeteira.wav",
-  "volume":0.2,
+  "volume":0.4,
 }
