@@ -1,4 +1,8 @@
 image_xscale = -1;
 
-alpha = 1;
-transicao = false;
+dialogo = false;
+
+alarm[0] = 5 * FPS;
+
+escrevedor = scribble_typist();
+escrevedor.in(1, 5);

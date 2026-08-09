@@ -8,8 +8,8 @@
   "name":"obj_tutorial",
   "overriddenProperties":[],
   "parent":{
-    "name":"Menu",
-    "path":"folders/Objects/Menu.yy",
+    "name":"Tutorial",
+    "path":"folders/Objects/Menu/Tutorial.yy",
   },
   "parentObjectId":null,
   "persistent":false,

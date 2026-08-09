@@ -58,3 +58,12 @@ desenha_pocao = function()
     //tecla
     draw_sprite_ext(spr_tecla, 1, _x - 40, _y, escala, escala, 0, c_white, 1);
 }
+
+desenha_engrenagem = function()
+{
+    var _x = 60;
+    var _y = 35;
+    
+    //tecla
+    draw_sprite_ext(spr_tecla_esc, 0, _x, _y, escala, escala, 0, c_white, 1);
+}
